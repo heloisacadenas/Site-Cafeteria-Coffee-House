@@ -38,45 +38,39 @@
                     </ul>
                   
                 </div>
-                <i class="bi bi-basket fs-2 me-1" style="color: #ffffe4; cursor: pointer; " type="button"></i>
+                <i class="bi bi-basket fs-2 me-1" style="color: #ffffe4; cursor: pointer;  " type="button"></i>
             </div>
         </nav>
         <!-- Mashead header-->
-        <header class="masthead" id="home">
-            <cabec id="cabec"></cabec>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <!-- Mashead text and app badges-->
-                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-1 lh-1 mb-3" style="font-family: Gunterz; color: #142c14; font-size: 71px;">O sabor do seu dia começa aqui.</h1>
-                            <p class="lead fw-normal text-muted mb-5" style="color: #727D73;">Coffe House, a cafeteria online favorita de quem quer começar o dia bem.</p>
-                            <button id="btncompra" href="#produtos">Compre aqui</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!-- Masthead device mockup feature-->
-                        <div class="masthead-device-mockup">
-                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop class="gradient-start-color" offset="0%"></stop>
-                                        <stop class="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <picture>
-                                    <source media="(max-width: 320px)" srcset="img4.png">
-                                    <img src="img4.2.png" id="img4" alt="Imagem responsiva">
-                                    </picture>
+   <section id="home">
+  <div id="cabec"></div>
 
-                                
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+  <div class="container px-5">
+    <div class="row gx-5 align-items-center">
+      <div class="col-lg-6">
+        <!-- Texto da home -->
+        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+          <h1 class="display-1 lh-1 mb-3">O sabor <span class="nowrap">do seu dia</span> começa aqui.</h1>
+
+          <p class="lead fw-normal text-muted" style="color: #727D73;">
+            Coffe House, a cafeteria online favorita de quem quer começar o dia bem.
+          </p>
+          <button id="btncompra" href="#produtos">Compre aqui</button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- Imagem responsiva -->
+        <div class="masthead-device-mockup">
+            <img src="img4.2.png" id="img4" alt="Imagem responsiva">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         <!-- App features section-->
-        <section id="produtos">
+        <section>
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
@@ -89,7 +83,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-0">
                         <!-- Features section device mockup-->
-                        <div class="features-device-mockup">
+                        <div class="features-device-mockup" id="produtos">
                             <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <linearGradient id="circleGradient" gradientTransform="rotate(45)">

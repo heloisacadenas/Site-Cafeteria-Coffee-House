@@ -40,34 +40,55 @@
 
 
 
- #img4
- {
-  
+#img4 {
   position: absolute;
-  margin: auto;
-  width: 600px;
-  text-align: center;
-  top: -460px;
- }
+  bottom: 0;
+  left: 72%;
+  transform: translateX(-50%);
+  width: 710px;
+  max-width: 46vw; /* em telas muito grandes, encolhe proporcionalmente */
+  min-width: 320px; /* em telas pequenas, evita sumir */
+  z-index: 20;
+}
 
- @media (max-width: 768px) {
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #cabec {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  #home {
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   #img4 {
-    top: -389px;
-    width: 100%; /* ocupa toda a largura */
-    position: absolute; /* muda para se ajustar ao fluxo */
-  
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    top: 0;
   }
 }
- #cabec {
+
+
+#cabec {
   position: absolute;
   top: 0;
-  width: 400px;
-  
-  height: 100%; /* ocupa toda a altura da .home */
-  background-color: #142c14;
   right: 0;
-
+  width: 25%; /* ou 30%, etc. */
+  height: 100%;
+  background-color: #142c14;
+  z-index: 10;
 }
+
+
 
 @media (max-width: 768px) {
   #cabec {
@@ -560,15 +581,25 @@ progress {
 }
 
 .display-1 {
-  font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
   line-height: 1.2;
+  font-family: Gunterz;
+  color: #142c14;
+
+  font-size: clamp(48px, 4vw, 72px);
 }
+
+
 @media (min-width: 1200px) {
   .display-1 {
-    font-size: 5rem;
+    font-size: 72px; /* mantém fixo mesmo em telas grandes */
   }
 }
+
+.nowrap {
+  white-space: nowrap;
+}
+
 
 
 .display-2 {
@@ -7744,7 +7775,14 @@ textarea.form-control-lg {
 
 .mb-5 {
   margin-bottom: 0.4rem !important;
+  position: relative;
+  /* desloca até no máximo 100px, mas diminui proporcionalmente em telas grandes */
+  left: min(10vw, 100px);
+  top: -20px;
+  transition: left 0.3s ease, top 0.3s ease;
 }
+
+
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -11149,87 +11187,13 @@ footer a:hover, footer a:active, footer a:focus {
   text-decoration: underline;
 }
 
-.masthead {
-  background-color: #ffffe4;
+
+#home {
+  background-color: #f4f4f4;
   padding-top: 9.5rem;
-  padding-bottom: 5rem;
-}
-.masthead .masthead-device-mockup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+ padding-right: 400px;
+  box-sizing: border-box;
   position: relative;
-}
-.masthead .masthead-device-mockup .circle {
-  position: absolute;
-  fill: url(#circleGradient);
-  width: 70%;
-  display: none;
-}
-.masthead .masthead-device-mockup .circle .gradient-start-color {
-  stop-color: #2937f0;
-}
-.masthead .masthead-device-mockup .circle .gradient-end-color {
-  stop-color: #9f1ae2;
-}
-.masthead .masthead-device-mockup .shape-1 {
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  transform: rotate(-10deg);
-  fill: #2937f0;
-  bottom: 15%;
-  left: 10%;
-}
-.masthead .masthead-device-mockup .shape-2 {
-  position: absolute;
-  height: 0.75rem;
-  width: 0.75rem;
-  fill: #2937f0;
-  top: 15%;
-  right: 10%;
-}
-.masthead .masthead-device-mockup .device-wrapper {
-  max-width: 10rem;
-}
-@media (min-width: 576px) {
-  .masthead .masthead-device-mockup .circle {
-    width: 70%;
-    display: block;
-  }
-  .masthead .masthead-device-mockup .device-wrapper {
-    max-width: 12.5rem;
-  }
-}
-@media (min-width: 768px) {
-  .masthead .masthead-device-mockup .circle {
-    width: 60%;
-  }
-  .masthead .masthead-device-mockup .device-wrapper {
-    max-width: 15rem;
-  }
-}
-@media (min-width: 992px) {
-  .masthead .masthead-device-mockup .circle {
-    width: 90%;
-  }
-  .masthead .masthead-device-mockup .device-wrapper {
-    max-width: 15rem;
-  }
-}
-@media (min-width: 1200px) {
-  .masthead .masthead-device-mockup .circle {
-    width: 75%;
-  }
-  .masthead .masthead-device-mockup .device-wrapper {
-    max-width: 15rem;
-  }
-}
-@media (min-width: 1400px) {
-  .masthead .masthead-device-mockup .circle {
-    width: 70%;
-  }
-  .masthead .masthead-device-mockup .device-wrapper {
-    max-width: 17rem;
-  }
 }
